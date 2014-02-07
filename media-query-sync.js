@@ -23,7 +23,7 @@
         2: 'sm',
         3: 'md',
         4: 'lg',
-        4: 'xl'
+        5: 'xl'
       };
 
   var deviceStateDetectionElement = document.createElement( 'div' );

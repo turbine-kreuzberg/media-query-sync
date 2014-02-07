@@ -9,6 +9,8 @@
 <body>
     <script type="text/javascript" src="media-query-sync.js"></script>
     <script type="text/javascript">
+        console.log( 'the current breakpoint is: ' + mediaQuerySync.getDeviceState() );
+
         window.addEventListener( 'deviceStateChanged', function( event ) {
 
             console.log( 'another breakpoint was reached: ' + event.deviceState );
