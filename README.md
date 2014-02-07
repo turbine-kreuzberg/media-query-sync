@@ -13,7 +13,7 @@ This plug-in is implemented as [AMD](https://github.com/amdjs/amdjs-api/wiki) an
 
 ### Requirements
 
-The plug-in uses the JavaScript `[CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)`. If you target browsers that do not know this object, you have to include the appropriate polyfill (polyfill.customevent.js).
+The plug-in uses the JavaScript [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). If you target browsers that do not know this object, you have to include the appropriate polyfill (polyfill.customevent.js).
 
     if( typeof window.CustomEvent !== 'function' ) {
         /* include polyfill (using your preferred script loading mechanism) */
