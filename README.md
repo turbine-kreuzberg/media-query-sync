@@ -1,17 +1,19 @@
-# MediaQuerySync
+# Media Query Sync
 
 Re-use CSS media queries in JavaScript.
 
 ## Motivation
 
-- DRY: All media queries are saved in one place. Especially when using tools as LESS CSS or SASS where the design breakpoints may be defined in the global variables file. Using this JS plug-in, one don't need to repeat the CSS media queries in a JS file.
+- [DRY](https://en.wikipedia.org/wiki/Don't_repeat_yourself): All media queries are saved in one place. Especially when using tools as LESS CSS or SASS where the design breakpoints may be defined in the global variables file. Using this JS plug-in, one don't need to repeat the CSS media queries in a JS file.
 - Fewer event actions for the layout: We may also listen to the resize event, but in many cases a redraw of the UI or a re-computing of layout options is not necessary on each resize action, but most times only if a design breakpoint was reached.
 
 ## Documentation
 
+This plug-in is implemented as [AMD](https://github.com/amdjs/amdjs-api/wiki) and has a fallback to a global variable.
+
 ### Requirements
 
-The plug-in uses the JavaScript [`CustomEvent`](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). If you target browsers that do not know this object, you have to include the appropriate polyfill (polyfill.customevent.js).
+The plug-in uses the JavaScript `[CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)`. If you target browsers that do not know this object, you have to include the appropriate polyfill (polyfill.customevent.js).
 
     if( typeof window.CustomEvent !== 'function' ) {
         /* include polyfill (using your preferred script loading mechanism) */
@@ -33,7 +35,7 @@ The numbers correspond to the `z-index`  of the element that is used for the tes
 
 #### Custom event
 
-One method to read a design breakpoint is to listen to the event `deviceStateChanged`, which has a property `deviceState`. This property contains a string naming the breakpoint that was reached as the event was fired.
+The first option to read a design breakpoint is to listen to the event `deviceStateChanged`, which has a property `deviceState`. This property contains a string naming the breakpoint that was reached as the event was fired.
 
 #### Public method
 
@@ -84,7 +86,5 @@ Include the provided CSS file in the HTML HEAD of your template or append it to 
 
 ### Demo
 
-A complete usage example is available at:
-http://demo.dev.votum.local/media-query-sync/demo.htm
-(Watch the JS console output.)
+A complete usage example is available at: http://demo.dev.votum.local/media-query-sync/demo.htm (Watch the JS console output.)
 
