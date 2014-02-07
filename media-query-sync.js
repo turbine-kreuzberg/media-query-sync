@@ -3,7 +3,7 @@
  *
  * @author    Thomas Heuer <thomas.heuer@votum.de>
  * @copyright Copyright (c) 2013 Votum media GmbH
- * @link      http://git.votum-media.net/vtm-frontend/media-query-sync
+ * @link      http://git.votum-media.net/vtm-frontend/media-query-sync/tree/master
  * based on:  http://davidwalsh.name/device-state-detection-css-media-queries-javascript
  */
 ( function( root, factory ) {
@@ -22,7 +22,8 @@
         1: 'xs',
         2: 'sm',
         3: 'md',
-        4: 'lg'
+        4: 'lg',
+        4: 'xl'
       };
 
   var deviceStateDetectionElement = document.createElement( 'div' );
