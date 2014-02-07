@@ -1,0 +1,21 @@
+
+#device-state-detection {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    z-index: 1;
+
+    @media all and (min-width: @screen-sm-min) {
+        z-index: 2;
+    }
+
+    @media all and (min-width: @screen-md-min) {
+        z-index: 3;
+    }
+
+    @media all and (min-width: @screen-lg-min) {
+        z-index: 4;
+    }
+
+    // Twitter Bootstrap does only define four breakpoints
+}

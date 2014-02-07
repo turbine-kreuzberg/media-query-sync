@@ -1,0 +1,28 @@
+
+#device-state-detection {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+
+  z-index: 1;
+}
+@media all and (min-width: 480px) {
+  #device-state-detection {
+    z-index: 2;
+  }
+}
+@media all and (min-width: 720px) {
+  #device-state-detection {
+    z-index: 3;
+  }
+}
+@media all and (min-width: 1024px) {
+  #device-state-detection {
+    z-index: 4;
+  }
+}
+@media all and (min-width: 1280px) {
+  #device-state-detection {
+    z-index: 5;
+  }
+}
