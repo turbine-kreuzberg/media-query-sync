@@ -59,6 +59,14 @@ Include the provided CSS file in the HTML HEAD of your template or append it to 
         }, false );
     } );
 
+You need to set up the event handler before the script is included to capture the initial event which is fired upon executing the module.
+
+    window.addEventListener( 'deviceStateChanged', function( event ) {
+        console.log( 'another breakpoint was reached: ' + event.deviceState );
+    }, false );
+    
+    require( [ 'media-query-sync' ] );
+
 #### Browser global
 
     <script type="text/javascript" src="media-query-sync.js"></script>
