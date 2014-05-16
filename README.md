@@ -39,6 +39,8 @@ The breakpoints are the following:
 
 The numbers correspond to the `z-index`  of the element that is used for the tests. Those z-indizes are set via CSS inside a given `@media` query. [See the attached CSS for an example](media-query-sync.css). [David Walsh](http://davidwalsh.name/device-state-detection-css-media-queries-javascript) also proposed to use pseudo elements and their `content` property to store the media query breakpoint identifiers directly. But [older versions of the iOS Safari and native Android browsers do not support `getComputedStyle` on pseudo-elements](http://caniuse.com/getcomputedstyle).
 
+There is a sister-repository at https://github.com/votum/media-queries from which may take the CSS media queries as those are defined more thorough.
+
 
 ### API
 
