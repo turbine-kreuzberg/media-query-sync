@@ -113,8 +113,3 @@ You need to set up the event handler before the script is included to capture th
 ### Demo
 
 You can run the usage example via rawgit.com: https://rawgit.com/votum/media-query-sync/master/demo.htm (Watch the JS console output.)
-
-
-## Contributions
-
-http://davidwalsh.name/device-state-detection-css-media-queries-javascript
