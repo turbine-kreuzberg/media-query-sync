@@ -1,15 +1,22 @@
-'use strict';
-
 /**
- * @param Event event
- * @param object params
- * @return Event
+ * Polyfill for the CustomEvent() constructor functionality in Internet Explorer 9 and 10.
+ *
+ * Source: https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
  */
-var CustomEvent = function( event, params ) {
-  params = params || { bubbles: false, cancelable: false, detail: undefined };
-  var evt = document.createEvent( 'CustomEvent' );
-  evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-  return evt;
-};
+(function() {
+    'use strict';
 
-window.CustomEvent = CustomEvent;
+    /**
+     * @param {Event} event
+     * @param {object} params
+     * @returns {Event}
+     */
+    function CustomEvent( event, params ) {
+        params = params || { bubbles: false, cancelable: false, detail: undefined };
+        var evt = document.createEvent( 'CustomEvent' );
+        evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+        return evt;
+    }
+    CustomEvent.prototype = window.Event.prototype;
+    window.CustomEvent = CustomEvent;
+})();

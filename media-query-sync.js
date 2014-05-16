@@ -2,8 +2,9 @@
  * MediaQuerySync – a module to reuse CSS media queries in JavaScript
  *
  * @author    Thomas Heuer <thomas.heuer@votum.de>
- * @copyright Copyright (c) 2013 Votum media GmbH
- * @link      http://git.votum-media.net/vtm-frontend/media-query-sync/tree/master
+ * @copyright Copyright (c) 2014 Votum GmbH
+ * @license   The MIT License (MIT)
+ * @link      https://github.com/votum/media-query-sync
  * based on:  http://davidwalsh.name/device-state-detection-css-media-queries-javascript
  */
 ( function( root, factory ) {
