@@ -13,7 +13,7 @@ This plug-in is implemented as [AMD](https://github.com/amdjs/amdjs-api/wiki) an
 
 ### Requirements
 
-The plug-in uses the JavaScript [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). If you target browsers that do not know this object, you have to include the appropriate polyfill (polyfill.customevent.js).
+The plug-in uses the JavaScript [CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent). If you target browsers that do not know this object, you have to include [the appropriate polyfill](polyfill.customevent.js).
 
     if( typeof window.CustomEvent !== 'function' ) {
         /* include polyfill (using your preferred script loading mechanism) */
@@ -29,7 +29,7 @@ The breakpoints are the following:
 4. 'lg'
 5. 'xl'
 
-The numbers correspond to the `z-index`  of the element that is used for the tests. Those z-indizes are set via CSS inside a give `@media` query. (See attached CSS or an example.)
+The numbers correspond to the `z-index`  of the element that is used for the tests. Those z-indizes are set via CSS inside a give `@media` query. (See attached CSS or an example.) David Walsh also proposed to use pseudo elements and their `content` property to store the media query breakpoint identifiers directly. But [older versions of the iOS Safari and native Android browsers do not support `getComputedStyle` on pseudo-elements](http://caniuse.com/getcomputedstyle).
 
 ### API
 
@@ -94,5 +94,4 @@ You need to set up the event handler before the script is included to capture th
 
 ### Demo
 
-A complete usage example is available at: http://demo.dev.votum.local/media-query-sync/demo.htm (Watch the JS console output.)
-
+You can run the usage example via rawgit.com: https://rawgit.com/votum/media-query-sync/master/demo.htm (Watch the JS console output.)
