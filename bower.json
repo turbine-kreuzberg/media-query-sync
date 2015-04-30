@@ -1,0 +1,15 @@
+{
+  "name": "media-query-sync",
+  "main": "media-query-sync.js",
+  "version": "1.0",
+  "homepage": "https://github.com/votum/media-query-sync",
+  "authors": [
+    "Thomas Heuer <thomas.heuer@votum.de>"
+  ],
+  "description": "Re-use CSS media queries in JavaScript.",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "license": "MIT"
+}
